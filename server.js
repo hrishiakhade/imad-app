@@ -22,7 +22,7 @@ app.get('/one', function (req, res) {
 });
 
 app.get('/two', function (req, res) {
-  res.send("Second Page serverd");
+  res.sendFile(path.join(__dirname, 'ui', 'two.html'));
 });
 
 app.get('/three', function (req, res) {
