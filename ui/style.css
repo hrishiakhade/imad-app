@@ -21,3 +21,9 @@ body {
     height: 200px;
 }
 
+.container{
+                margin-left: 0 ;
+                color: red;
+                text-align:center;
+                
+            }
