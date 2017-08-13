@@ -26,7 +26,7 @@ app.get('/two', function (req, res) {
 });
 
 app.get('/three', function (req, res) {
-  res.send("Third Page serverd");
+  res.sendFile(path.join(__dirname, 'ui', 'three.html'));
 });
 
 
