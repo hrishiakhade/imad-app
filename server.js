@@ -32,7 +32,11 @@ app.get('/two', function (req, res) {
 app.get('/three', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'three.html'));
 });
-
+var counter=0;
+app.get('/counter', function (req, res) {
+    counter=counter+1;
+  res.send("You are Visitor Number : "+counter.toString());
+});
 
 var port = 80; // Use 8080 for local development because you might already have apache running on 80
 app.listen(80, function () {
