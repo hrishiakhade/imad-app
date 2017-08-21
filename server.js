@@ -28,7 +28,7 @@ app.get('/ui/main.js', function (req, res) {
 });
 
 
-app.get('/test-db', function(req,res){
+app.get('/test', function(req,res){
     pool.query('select * from test',function(err,req){
         if(err){
             res.status(500).send(err,toString());
