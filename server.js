@@ -45,7 +45,8 @@ app.get('/db-1', function(req,res){
             res.status(500).send(err,toString());
         }
         else{
-            res.send(JSON.stringify(result));
+            var articleData=result.rows[0];
+            res.send(createTemplate(article.data));
         }
     });
     
