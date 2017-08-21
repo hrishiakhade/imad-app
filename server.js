@@ -2,12 +2,12 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
-var pool=new Pool(config);
+
 var config={
     user:'hrishakhade',
     database:'hrishakhade',
     host:'db.imad.hasura-app.io',
-    port:'5432',
+    port:'8080',
     password: process.env.DB_PASSWORD
 };
 
@@ -27,7 +27,7 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-
+var pool=new Pool(config);
 app.get('/test', function(req,res){
     pool.query('select * from test',function(err,req){
         if(err){
